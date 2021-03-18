@@ -1,18 +1,29 @@
 {
   "name": "duboisag-winstrip",
-  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "bin": "cli.js",
-  "scripts": {
-    "start": "node cli.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "version": "1.0.0",
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
-  "license": "MPL-2.0",
+  "bin": {
+    "duboisag-winstrip": "cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/pdehaan/winstrip/issues"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/pdehaan/winstrip#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/winstrip.git"
+  },
+  "scripts": {
+    "start": "node cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
