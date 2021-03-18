@@ -6,9 +6,8 @@ const cheerio = require("cheerio");
 scrape();
 
 async function scrape() {
-  const res = await axios.get(
-    "https://duboisag.com/ca_en//winstrip-tray-by-neversink-2.html"
-  );
+  const href = "https://duboisag.com/ca_en/winstrip-tray-by-neversink-2.html";
+  const res = await axios.get(href);
   const $ = cheerio.load(res.data);
   const inventory = $('script[type="text/x-magento-init"]')
     .map((i, el) => {
@@ -22,5 +21,6 @@ async function scrape() {
       }
     })
     .get();
+  console.log(`> ${href}`);
   console.log(inventory);
 }
